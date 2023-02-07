@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
+}
+
+ul, ol {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+body {
+  background-color: $bg;
+}
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1170px;
+  margin: 50px auto;
+}

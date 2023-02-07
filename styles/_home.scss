@@ -1,0 +1,251 @@
+@use "variables";
+
+
+ h1 {
+   font: 24px / 32px 'Roboto500';
+   margin-bottom: 20px;
+ }
+
+
+.form-holder {
+  max-width: 570px;
+  width: 100vw;
+  margin: 0 auto 50px;
+  background-color: $bg-form;
+  padding: 35px 36px 16px;
+  border: 1px solid $border-form;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+  .form {
+    margin-bottom: 30px;
+  }
+
+}
+label {
+  display: block;
+  color: #545454;
+  margin-bottom: 3px;
+  font: 15px/22px 'Roboto400';
+}
+.form-tooltip {
+  font: 13px/18px 'Roboto400';
+}
+
+.form-group-input input,
+.form-group-select select {
+  width: 100%;
+  border: 1px solid $border-input;
+  border-radius: 6px;
+  height: 38px;
+  outline: none;
+  padding: 0 15px;
+  &:focus,
+  &:focus{
+    border-color: $blue;
+  }
+}
+
+.form-group-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 12px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group-radio-btns {
+  display: flex;
+}
+
+//
+
+.form-group-radio {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.form-group-radio {
+  position: relative;
+}
+
+.form-group-radio input {
+  position: absolute;
+  opacity: 0;
+}
+
+.form-group-radio label {
+  padding-left: 28px;
+  box-sizing: border-box;
+  &::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid $border-input;
+    transition: .2s all;
+  }
+}
+
+.form-group-radio input:checked + label::before {
+  border: 6px solid $blue;
+}
+
+.form-tooltip {
+  display: block;
+  letter-spacing: -0.1px;
+  color: #969696;
+  margin-top: 8px;
+}
+
+.form-group-checkbox input {
+  position: absolute;
+  opacity: 0;
+}
+.btn-submit {
+   width: 100%;
+   @extend %btn;
+}
+.form-privacy {
+  color: $subText;
+  text-align: center;
+  .form-privacy__info{
+    font: 13px/18px 'Roboto400';
+    padding: 0 50px;
+    margin: 0 auto;
+    a {
+      color: $blue;
+    }
+  }
+
+  .form-privacy__account {
+  
+    margin: 0 auto;
+    font: 15px/22px 'Roboto400';
+    a {
+      color: $blue;
+      font:15px/22px 'Roboto500';
+    }
+  }
+  .line {
+    width: 500px;
+    height: 1px;
+    background-color: $border-input;
+    margin: 20px auto;
+  }
+}
+
+.form-privacy__account{
+
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.form-input-select {
+    appearance: none;
+    overflow: hidden;
+    background: url('../images/icons/icon-select.svg') no-repeat 95%;
+}
+ .btn-update {
+   width: 150px;
+   @extend %btn;
+ }
+
+#img-preview {
+  display: none;
+  width: 80px;
+  height:80px;
+}
+#img-preview img {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: block;
+  object-fit: cover;
+
+}
+[type="file"] {
+  height: 0;
+  width: 0;
+  overflow: hidden;
+}
+[type="file"] + label {
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.dl-ava {
+  width: 80px;
+  height: 80px;
+  background: $subText;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 80px;
+    border-radius: 50%;
+  }
+}
+
+
+.ava {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 20px 0;
+  .file-info{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    .actions{
+      display: flex;
+    }
+    .file-name {
+      border: 1px solid $border-input;
+      border-radius: 6px;
+      width: 140px;
+      height: 30px;
+      font: 13px/18px 'Roboto400';
+      color: $subText;
+      overflow: hidden;
+      padding-left: 3px;
+      display: flex;
+      align-items: center;
+      margin-bottom: 9px;
+      .file-name__foto {
+        cursor: pointer;
+        width: 16px;
+        height:16px;
+        background: url('../images/icons/camera.svg') no-repeat center;
+        margin: 0 6px;
+      }
+      span {
+        display: block;
+        width: 115px;
+        overflow: hidden;
+      }
+    }
+    span {
+      letter-spacing: -0.1px;
+      font: 13px/18px 'Roboto400';
+      color: $subText;
+    }
+    .delite-file{
+      border: 1px solid $border-input;
+      border-radius: 6px;
+      width: 30px;
+      height: 30px;
+      background: url('../images/icons/trash.svg') no-repeat center;
+      display: inline-block;
+      margin-left: 10px;
+    }
+  }
+
+}

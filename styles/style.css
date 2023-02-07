@@ -1,0 +1,299 @@
+.btn-update, .btn-submit {
+  height: 38px;
+  background: #007BFF;
+  border: 1px solid #E4E4E4;
+  border-radius: 6px;
+  color: #fff;
+  font: 15px/22px "Roboto500";
+}
+
+@font-face {
+  font-family: "Roboto400";
+  src: url("../fonts/Roboto-Regular.woff2") format("woff2"), url("../fonts/Roboto-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto500";
+  src: url("../fonts/Roboto-Medium.woff2") format("woff2"), url("../fonts/Roboto-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+*::before, *::after {
+  box-sizing: border-box;
+}
+
+ul, ol {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: #E5E5E5;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1170px;
+  margin: 50px auto;
+}
+
+h1 {
+  font: 24px/32px "Roboto500";
+  margin-bottom: 20px;
+}
+
+.form-holder {
+  max-width: 570px;
+  width: 100vw;
+  margin: 0 auto 50px;
+  background-color: #fff;
+  padding: 35px 36px 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+.form-holder .form {
+  margin-bottom: 30px;
+}
+
+label {
+  display: block;
+  color: #545454;
+  margin-bottom: 3px;
+  font: 15px/22px "Roboto400";
+}
+
+.form-tooltip {
+  font: 13px/18px "Roboto400";
+}
+
+.form-group-input input,
+.form-group-select select {
+  width: 100%;
+  border: 1px solid #E4E4E4;
+  border-radius: 6px;
+  height: 38px;
+  outline: none;
+  padding: 0 15px;
+}
+.form-group-input input:focus, .form-group-input input:focus,
+.form-group-select select:focus,
+.form-group-select select:focus {
+  border-color: #007BFF;
+}
+
+.form-group-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 12px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group-radio-btns {
+  display: flex;
+}
+
+.form-group-radio {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.form-group-radio {
+  position: relative;
+}
+
+.form-group-radio input {
+  position: absolute;
+  opacity: 0;
+}
+
+.form-group-radio label {
+  padding-left: 28px;
+  box-sizing: border-box;
+}
+.form-group-radio label::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #E4E4E4;
+  transition: 0.2s all;
+}
+
+.form-group-radio input:checked + label::before {
+  border: 6px solid #007BFF;
+}
+
+.form-tooltip {
+  display: block;
+  letter-spacing: -0.1px;
+  color: #969696;
+  margin-top: 8px;
+}
+
+.form-group-checkbox input {
+  position: absolute;
+  opacity: 0;
+}
+
+.btn-submit {
+  width: 100%;
+}
+
+.form-privacy {
+  color: #969696;
+  text-align: center;
+}
+.form-privacy .form-privacy__info {
+  font: 13px/18px "Roboto400";
+  padding: 0 50px;
+  margin: 0 auto;
+}
+.form-privacy .form-privacy__info a {
+  color: #007BFF;
+}
+.form-privacy .form-privacy__account {
+  margin: 0 auto;
+  font: 15px/22px "Roboto400";
+}
+.form-privacy .form-privacy__account a {
+  color: #007BFF;
+  font: 15px/22px "Roboto500";
+}
+.form-privacy .line {
+  width: 500px;
+  height: 1px;
+  background-color: #E4E4E4;
+  margin: 20px auto;
+}
+
+.form-privacy__account {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.form-input-select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  overflow: hidden;
+  background: url("../images/icons/icon-select.svg") no-repeat 95%;
+}
+
+.btn-update {
+  width: 150px;
+}
+
+#img-preview {
+  display: none;
+  width: 80px;
+  height: 80px;
+}
+
+#img-preview img {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+[type=file] {
+  height: 0;
+  width: 0;
+  overflow: hidden;
+}
+
+[type=file] + label {
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.dl-ava {
+  width: 80px;
+  height: 80px;
+  background: #969696;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dl-ava img {
+  width: 80px;
+  border-radius: 50%;
+}
+
+.ava {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 20px 0;
+}
+.ava .file-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+.ava .file-info .actions {
+  display: flex;
+}
+.ava .file-info .file-name {
+  border: 1px solid #E4E4E4;
+  border-radius: 6px;
+  width: 140px;
+  height: 30px;
+  font: 13px/18px "Roboto400";
+  color: #969696;
+  overflow: hidden;
+  padding-left: 3px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 9px;
+}
+.ava .file-info .file-name .file-name__foto {
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  background: url("../images/icons/camera.svg") no-repeat center;
+  margin: 0 6px;
+}
+.ava .file-info .file-name span {
+  display: block;
+  width: 115px;
+  overflow: hidden;
+}
+.ava .file-info span {
+  letter-spacing: -0.1px;
+  font: 13px/18px "Roboto400";
+  color: #969696;
+}
+.ava .file-info .delite-file {
+  border: 1px solid #E4E4E4;
+  border-radius: 6px;
+  width: 30px;
+  height: 30px;
+  background: url("../images/icons/trash.svg") no-repeat center;
+  display: inline-block;
+  margin-left: 10px;
+}/*# sourceMappingURL=style.css.map */

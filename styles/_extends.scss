@@ -1,0 +1,10 @@
+@use "variables";
+
+%btn {
+  height: 38px;
+  background: $blue;
+  border: 1px solid $border-input;
+  border-radius: 6px;
+  color: $bg-form;
+  font: 15px/22px 'Roboto500';
+}
